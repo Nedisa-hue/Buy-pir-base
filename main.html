@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAVIYA PAIR</title>
+  <meta name="theme-color" content="#ff1a1a" />
+  <link rel="shortcut icon" href="https://files.catbox.moe/secl9d.jpg" type="image/png">
+
+  <style>
+    :root{
+      --red-1:#ff1a1a;
+      --red-2:#ff3b3b;
+      --red-3:#ff7676;
+      --dark-1:#0b0b0b;
+      --dark-2:#161616;
+      --ring: 0 0 24px rgba(255, 40, 40, .6), 0 0 64px rgba(255, 40, 40, .25);
+    }
+
+    body{
+      height:100vh; margin:0;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; background: var(--dark-1);
+      font-family: system-ui, sans-serif;
+      overflow:hidden;
+    }
+
+    /* 🔴 Animated red glow background */
+    body::before{
+      content:"";
+      position:fixed; inset:-20%;
+      background:
+        radial-gradient(60vmax 60vmax at 10% 20%, rgba(255,0,0,.10), transparent 60%),
+        radial-gradient(70vmax 70vmax at 90% 80%, rgba(255,60,60,.10), transparent 60%),
+        radial-gradient(100vmax 80vmax at 50% 50%, rgba(255,20,20,.06), transparent 60%);
+      filter: blur(10px);
+      animation: bg-move 18s ease-in-out infinite alternate;
+      z-index: -2;
+    }
+    @keyframes bg-move{
+      0% { transform: translate3d(0,0,0) scale(1); }
+      100% { transform: translate3d(2%, -2%, 0) scale(1.05); }
+    }
+
+    .container{
+      text-align:center;
+      display:flex; flex-direction:column; align-items:center; gap:18px;
+      padding:32px 26px 72px;
+      background: rgba(255,30,30,.05);
+      border: 1px solid rgba(255, 50, 50, .2);
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 40px rgba(255, 30, 30, .12);
+    }
+
+    /* 🔴 Logo animation */
+    .img-wrapper img{
+      width:120px; height:120px;
+      border-radius:50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+      opacity:0;
+      animation: logoIn 1.2s ease forwards, floaty 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(255,50,50,.6));
+    }
+    @keyframes logoIn{
+      0%{ opacity:0; transform: scale(.6) rotate(-20deg);}
+      100%{ opacity:1; transform: scale(1) rotate(0deg);}
+    }
+    @keyframes floaty{
+      0%,100%{ transform: translateY(0) scale(1);}
+      50%{ transform: translateY(-8px) scale(1.03);}
+    }
+
+    h1{
+      margin:4px 0 12px 0;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      background: linear-gradient(90deg, var(--red-3), #fff);
+      -webkit-background-clip: text; background-clip:text; color: transparent;
+      text-shadow: 0 0 20px rgba(255,60,60,.3);
+      opacity:0; transform: translateY(-12px);
+      animation: fadeDown .9s .5s ease forwards, glowPulse 3s 1.2s ease-in-out infinite;
+    }
+    @keyframes fadeDown{to{opacity:1; transform:translateY(0);}}
+    @keyframes glowPulse{
+      0%,100%{ text-shadow: 0 0 10px rgba(255,60,60,.25), 0 0 30px rgba(255,60,60,.15); }
+      50%{ text-shadow: 0 0 22px rgba(255,70,70,.45), 0 0 60px rgba(255,30,30,.25); }
+    }
+
+    .button{
+      width:220px; height:48px;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:14px;
+      color:white; text-decoration:none;
+      font-weight:900; letter-spacing:.06em;
+      position:relative; cursor:pointer;
+      background: #111;
+      overflow:hidden;
+      transition:.2s;
+      margin-top: 8px;
+    }
+    .button::before{
+      content:""; position:absolute; inset:-2px; border-radius:16px;
+      background: linear-gradient(120deg, rgba(255,40,40,.0), rgba(255,40,40,.8), rgba(255,40,40,.0));
+      background-size:200% 200%;
+      animation: borderRun 3s linear infinite;
+      z-index:-1;
+    }
+    .button:hover{ transform:translateY(-2px); }
+    .button:active{ transform:scale(.97); }
+
+    @keyframes borderRun{
+      0%{ background-position:0% 50% }
+      50%{ background-position:100% 50% }
+      100%{ background-position:0% 50% }
+    }
+
+    p.info-text{
+      margin-top: 20px;
+      font-size:.92rem;
+      color: var(--red-3);
+      text-shadow: 0 0 6px rgba(255,40,40,.4);
+    }
+
+    footer{
+      position: fixed; bottom:0; left:0; right:0;
+      background: rgba(255,30,30,.1);
+      text-align:center;
+      padding:10px;
+      font-size:14px;
+      border-top: 1px solid rgba(255,60,60,.25);
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="CYBER KAVIYA MD">
+    <div class="img-wrapper">
+      <img src="https://files.catbox.moe/secl9d.jpg" alt="kaviya Logo" loading="lazy" />
+    </div>
+
+    <h1>KAVIYA MD PAIR</h1>
+
+    <a href="/pair" class="button" target="_blank" rel="noopener noreferrer"><span>PAIRING-CODE</span></a>
+    <a href="#" class="button" target="_blank" rel="noopener noreferrer"><span>FORK BOT</span></a>
+
+    <p class="info-text">IF YOU HAVE AN ERROR, PLEASE CLICK THE ERROR BUTTON BELOW</p>
+
+    <a href="https://wa.me/+94761207139?text=HAVE_ERROR_Kaviya" class="button" target="_blank" rel="noopener noreferrer"><span>ERROR</span></a>
+  </main>
+
+  <footer>
+    KAVIYA MD &copy; <span id="year"></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

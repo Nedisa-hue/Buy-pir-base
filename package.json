@@ -9,7 +9,7 @@
      "restart": "pm2 restart freedom"
     },
   "dependencies": {
-    "@whiskeysockets/baileys": "npm:baileys-dtz",
+    "@whiskeysockets/baileys": "npm:anju-xpro-baileys",
     "qrcode": "^1.5.4",
     "awesome-phonenumber": "7.2.0",
     "pino": "9.5.0",
@@ -23,4 +23,3 @@
     "pm2": "^5.4.1"
    }
 }
- 
